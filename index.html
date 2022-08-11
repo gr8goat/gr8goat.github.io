@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/931d4f33e2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div id="nav-left">
+            <i class="fa-solid fa-house"></i>
+            <span class="font-16" style="margin-left: 16px;">Name Lastname</span>
+        </div>
+        <div id="nav-right">
+            <span class="highlight-hover-pink"><a href="#" class="font-16 txt-no-decoration">Portfolio</a></span>
+            <span class="highlight-hover-pink"><a href="#about-me" class="font-16 txt-no-decoration">About</a></span>
+            <span class="highlight-hover-pink"><a href="#" class="font-16 txt-no-decoration ">Contact Me</a></span>
+            <span class="material-symbols-outlined unselectable switch" id="lightSwitch" onclick="themeSwitch();">
+                dark_mode
+            </span>
+
+        </div>
+    </nav>
+
+    <div class="sidebarScroll">
+        <img class="sidebarImg" src="./static/figma_img/invertLogo/email.png" alt="email logo">
+        <img class="sidebarImg" src="./static/figma_img/invertLogo/github.png" alt="github logo">
+        <img class="sidebarImg" src="./static/figma_img/invertLogo/linkedin.png" alt="linkedin logo">
+    </div>
+    <section id="welcome-section" class="margin-b-120">
+        <div class=" prefacePic">
+        </div>
+        <div class="prefaceTxt">
+            <img src="./static/figma_img/invertLogo/quote.png" alt="quote mark" class="quote left">
+            <img src="./static/figma_img/invertLogo/quote.png" alt="quote mark" class="quote right">
+            <!-- <div class="line"></div> -->
+            <p class="coloredPink font-14_25 margin-tb-0">HELLO, MY NAME IS GREAT</p>
+            <h1 class="font-70_5 margin-tb-0">I make <span class="inline-block highlight-blue-20px">websites.</span>
+            </h1>
+            <p class="margin-tb-0">Lorem ipsum dolor sit amet, consectetur <span
+                    class="inline-block highlight-pink">adipiscing</span> elit. Duis porttitor,
+                tellus et finibus <span class="inline-block highlight-pink">vulputate,</span> dolor ipsum molestie
+                lorem, et pulvinar.</p>
+        </div>
+    </section>
+    <section id="projects" class="margin-b-120">
+        <div class="projectsTxt">
+            <p class=" bold font-36 margin-tb-0">Check out my works</p>
+            <p class="light font-27 margin-tb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut.
+            </p>
+        </div>
+        <div class="project-container">
+            <div class="project-tile margin-r-120">
+
+                <a href="#">
+                    <div class="projectImg">
+                        <img id="project1" class="borderRadius24" src="./static/project.jpg" alt="">
+                    </div>
+                </a>
+
+                <p class="font-224 margin-tb-0 coloredBlue projectNumber unselectable">1</p>
+            </div>
+            <div class="project-tile margin-r-120">
+                <a href="#">
+                    <div class="projectImg">
+                        <img id="project2" class="borderRadius24" src="./static/project.jpg" alt="">
+                    </div>
+                </a>
+
+                <p class="font-224 margin-tb-0 coloredBlue projectNumber unselectable">2</p>
+            </div>
+            <div class="project-tile margin-r-120">
+                <a href=" #">
+                    <div class="projectImg">
+                        <img id="project3" class="borderRadius24" src="./static/project.jpg" alt="">
+                    </div>
+                </a>
+                <p class="font-224 margin-tb-0 coloredBlue projectNumber unselectable">3</p>
+            </div>
+            <div class="project-tile">
+
+                <a href="#">
+                    <div class="projectImg">
+                        <img id="project4" class="borderRadius24" src="./static/project.jpg" alt="">
+                    </div>
+                </a>
+
+                <p class="font-224 margin-tb-0 coloredBlue projectNumber unselectable"">
+                    4</p>
+            </div>
+            <p class=" opacityTxt">Go to my portfolio</p>
+            </div>
+    </section>
+    <section id="about-me" class="margin-b-120">
+        <div class="profileImg borderRadius12">
+        </div>
+        <div class="profileTxt">
+            <p class="bold font-70_5 margin-tb-0 highlight-blue-20px" id="aboutMeTitle">About me</p>
+            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat eros ut lacus
+                tempus, eget.</p>
+            <p class="light">Vivamus ut nulla et urna blandit ultricies. Vestibulum non pellentesque leo, ac viverra
+                lorem. Curabitur
+                malesuada odio
+                nec neque sodales.</p>
+            <p class="light">Etiam eu ornare quam. Vivamus vulputate eros vitae tempor faucibus. Nulla vitae consequat
+                sem, quis</p>
+            <p class="light">Ut at ex erat. Aliquam at tellus felis. Etiam.</p>
+        </div>
+    </section>
+    <section id="contact" class="margin-b-120">
+        <div class=" contactMeLeftContainer">
+            <p class="bold font-70_5 margin-tb-0" id="contactMeTitle">Contact me</p>
+            <form class="inputContainer" action="#">
+                <input class="bgTransparent borderRadius12" type="text" placeholder="Your name..">
+                <input class="bgTransparent borderRadius12" type="email" placeholder="Your email..">
+                <input class="bgTransparent borderRadius12" type="text" placeholder="Your phone number..">
+                <textarea class="bgTransparent borderRadius12" name="" id="" cols="30" rows="10"
+                    placeholder="Your message.."></textarea>
+                <button class="bgColoredBlue borderLess btn-submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contactMeRightContainer">
+            <div class="contactImg">
+                <img src="./figma_img/contact.png" alt="">
+            </div>
+            <div id="profile-link-container">
+                <div class="sidebarLogo">
+                    <img class="sidebarImg" src="./static/figma_img/invertLogo/email.png" alt="email logo">
+                    <img class="sidebarImg" src="./static/figma_img/invertLogo/github.png" alt="github logo">
+                    <img class="sidebarImg" src="./static/figma_img/invertLogo/linkedin.png" alt="linkedin logo">
+                </div>
+                <div class="linkContainer borderRadius12">
+                    <a href="#" id="profile-link" target="_blank" class="light">sample@gmail.com</a>
+                    <a href="#" id="profile-link2" target="_blank" class="light">sample@gmail.com</a>
+                    <a href="#" id="profile-link3" target="_blank" class="light">sample@gmail.com</a>
+                </div>
+            </div>
+    </section>
+    <footer id="footer">
+        <div class="footerLogoContainer">
+            <img src="./figma_img/invertLogo/email.png" alt="email logo">
+            <img src="./figma_img/invertLogo/github.png" alt="github logo">
+            <img src="./figma_img/invertLogo/linkedin.png" alt="linkedin logo">
+            <img src="./figma_img/invertLogo/facebook.png" alt="facebook logo">
+        </div>
+        <p class="footerTxt font-14_25">Great © 2022</p>
+    </footer>
+
+    <script>
+
+        var hidden = true;
+        $(document).ready(function () {
+            $(window).on('scroll', function () {
+                var y_scroll_pos = window.pageYOffset;
+                var scroll_pos_test = $('#about-me').offset().top;             // set to whatever you want it to be
+                console.log(y_scroll_pos);
+                console.log(scroll_pos_test);
+                if (hidden == true) {
+                    if (y_scroll_pos > scroll_pos_test) {
+                        //do stuff
+                        animationOut();
+                        // console.log(y_scroll_pos);
+                        // console.log('worked')    ;
+                        hidden = false;
+                    }
+                } else {
+                    if (y_scroll_pos < scroll_pos_test) {
+                        //do stuff
+                        animationIn();
+                        // console.log(y_scroll_pos);
+                        hidden = true;
+                    }
+                }
+
+            });
+        });
+
+        var animationIn = function () {
+            // console.log('function called in');
+            anime({
+                targets: '.sidebarScroll',
+                translateX: 0,
+                duration: 800,
+                delay: 0,
+            });
+
+        }
+
+        var animationOut = function () {
+            // console.log('function called out');
+            anime({
+                targets: '.sidebarScroll',
+                translateX: 60,
+                duration: 800,
+                delay: 0,
+            });
+        }
+
+
+        var lightOff = true;
+        var themeSwitch = function () {
+            // console.log('function called');
+            if (lightOff == true) {
+                $("#lightSwitch").text("light_mode");
+                // toLight(); 
+                lightOff = false;
+            } else {
+                $("#lightSwitch").text("dark_mode");
+                // toDark(); --------- wip
+                lightOff = true;
+            }
+        }
+
+        var toLight = function () {
+            // console.log('tolight worked');
+            $('link[href="styles.css"]').attr('href', 'styles2.css');
+        }
+        var toDark = function () {
+            // console.log('todark worked');
+            $('link[href="styles2.css"]').attr('href', 'styles.css');
+        }
+    </script>
+
+</body>
+
+</html>

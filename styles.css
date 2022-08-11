@@ -1,0 +1,833 @@
+:root {
+    --color-bg: #0E141B;
+    --color-pink: #FF5277;
+    --color-pink-shadow: #a3596b70;
+    --color-blue: #214F61;
+    --color-gray: #D9D9D9;
+    --color-txt-main-dark: white;
+    --color-pink-40-opa: #6E2D40;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: var(--color-txt-main-dark);
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-bg);
+    position: relative;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.displayOn {
+    display: static !important;
+}
+
+.displayOff {
+    display: none !important;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.coloredPink {
+    color: var(--color-pink);
+}
+
+.coloredBlue {
+    color: var(--color-blue);
+}
+
+/* ///////////// margin padding style css /////////////// */
+
+.margin-tb-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.margin-r-120 {
+    margin-right: 120px;
+}
+
+.margin-b-120 {
+    margin-bottom: 120px;
+}
+
+/* ///////////// text style css /////////////// */
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.font-14_25 {
+    font-size: 0.58333rem;
+}
+
+.font-16 {
+    font-size: 0.66667rem;
+}
+
+.font-27 {
+    font-size: 1.125rem;
+}
+
+.font-36 {
+    font-size: 1.5rem;
+}
+
+.font-70_5 {
+    font-size: 2.9167rem;
+}
+
+.font-224 {
+    font-size: 9.3333rem;
+}
+
+.txt-no-decoration {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.highlight-hover-pink:hover {
+    box-shadow: 0px -10px 0px var(--color-pink-40-opa) inset;
+    transition: box-shadow 0.5s ease;
+}
+
+.highlight-pink {
+    box-shadow: 0px -10px 0px var(--color-pink-40-opa) inset;
+}
+
+.highlight-pink-20px {
+    box-shadow: 0px -20px 0px var(--color-pink-40-opa) inset;
+}
+
+.highlight-blue-20px {
+    box-shadow: 0px -20px 0px var(--color-blue) inset;
+}
+
+.inline-block {
+    display: inline-block;
+    font-size: inherit;
+}
+
+
+/* ///////////////////// border css ///////////////////// */
+
+.borderLess {
+    border: none;
+}
+
+.borderRadius12 {
+    border-radius: 12px;
+}
+
+.borderRadius24 {
+    border-radius: 24px;
+}
+
+/* ////////////////////// background color style css /////////////////////////// */
+
+.bgTransparent {
+    background-color: transparent;
+}
+
+.bgColoredBlue {
+    background-color: var(--color-blue);
+}
+
+.bgColoredPink {
+    background-color: var(--color-pink);
+}
+
+.bgColoredGray {
+    background-color: var(--color-gray);
+}
+
+
+
+/* //////////// nav bar css ////////////////// */
+
+#navbar {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: var(--color-bg);
+}
+
+
+
+#nav-left {
+    margin-left: 120px;
+}
+
+#nav-right {
+    display: flex;
+    margin-right: 120px;
+}
+
+#nav-right>span {
+    display: inline-block;
+    margin: 0 12px;
+    transition: box-shadow 0.5s ease;
+}
+
+.switch {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.switch:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.5s ease;
+
+}
+
+
+/* //////////////////// welcome section css /////////////////////////// */
+
+#welcome-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 90px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.prefacePic {
+    min-width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+}
+
+.prefaceTxt {
+    margin-left: 120px;
+    width: 890px;
+    position: relative;
+}
+
+.quote {
+    width: 95px;
+    height: 70px;
+    position: absolute;
+}
+
+.quote.left {
+    top: -35px;
+    left: -75px;
+    z-index: -1;
+    transform: scaleY(-1);
+}
+
+.quote.right {
+    right: -75px;
+    bottom: -35px;
+    transform: scale(-1, -1);
+}
+
+.prefaceTxt h1 {
+    display: block;
+    position: relative;
+}
+
+.prefaceTxt .line {
+    width: 260px;
+    height: 17px;
+    opacity: 40%;
+    z-index: -1;
+    left: 30%;
+    bottom: 8px;
+    position: absolute;
+    background-color: var(--color-blue);
+}
+
+/* //////////////////// project section css /////////////////////////// */
+#projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+}
+
+.project-container {
+    display: flex;
+    position: relative;
+}
+
+.project-tile {
+    display: flex;
+    flex: 1 1 0;
+    position: relative;
+    margin-top: 42px;
+    cursor: pointer;
+}
+
+.project-tile:hover>.projectNumber {
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    color: var(--color-txt-main-dark);
+    text-shadow: 5px 7px 18px var(--color-pink);
+}
+
+.projectNumber {
+    position: absolute;
+    right: -85px;
+    bottom: -80px;
+    z-index: 2;
+    cursor: default;
+    object-fit: contain;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    text-shadow: 5px 7px var(--color-pink);
+}
+
+.opacityTxt {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    cursor: pointer;
+    opacity: 40%;
+    transition: opacity 0.3s ease;
+}
+
+.opacityTxt:hover {
+    opacity: 100%;
+    transition: opacity 0.3s ease;
+}
+
+
+/* ////////////////////// about me css section ///////////////////////// */
+
+#about-me {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profileImg {
+    width: 780px;
+    height: 450px;
+    background-image: url("./static/profilePic.JPG");
+    background-position: 0% 40%;
+    background-size: cover;
+    background-color: var(--color-gray);
+    box-shadow: 12px 15px 2px var(--color-pink-shadow);
+}
+
+.profileTxt {
+    margin-left: 56px;
+    width: 40%;
+}
+
+#aboutMeTitle {
+    width: fit-content;
+}
+
+/* //////////////////// sidebar logo css /////////////////////////// */
+
+
+.sidebarLogo {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.sidebarScroll {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    position: fixed;
+    bottom: 18%;
+    right: 16px;
+    box-shadow: -10px 0 0px var(--color-pink-40-opa) inset;
+}
+
+.sidebarImg {
+    width: 24px;
+    height: 24px;
+    margin: 2px 8px;
+    cursor: pointer;
+}
+
+.sidebarLogo>.container {
+    display: flex;
+    align-items: center;
+}
+
+.sidebarLogo>.container>a {
+    margin-left: 45px;
+}
+
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 40px;
+    background-color: var(--color-pink-40-opa);
+    transform: translateX(-14px);
+}
+
+
+
+/* ////////////////////// contact me css section ///////////////////////// */
+
+/* .contactMeLeftContainer {
+    display: flex;
+    flex-direction: column;
+} */
+
+#contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contactMeLeftContainer {
+    padding-top: 40px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.inputContainer>input {
+    width: 75%;
+}
+
+.inputContainer>*:not(button) {
+    border: 1px solid var(--color-gray);
+    padding: 4px 16px;
+    margin-bottom: 12px;
+}
+
+.inputContainer>textarea {
+    max-height: 245.49px;
+    resize: none;
+}
+
+.btn-submit {
+    border-radius: 50px;
+}
+
+.contactMeRightContainer {
+    margin-left: 120px;
+}
+
+.contactImg>img {
+    width: 736px;
+    width: 491px;
+}
+
+#profile-link-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ////////////////////// footer css section ///////////////////////// */
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.footerLogoContainer {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    padding-right: 8px;
+    border-right: 1px solid var(--color-pink-40-opa);
+}
+
+.footerLogoContainer>img {
+    width: 24px;
+    height: 24px;
+    margin: 2px 8px;
+    cursor: pointer;
+}
+
+.footerTxt {
+    margin-left: 16px;
+    font-weight: lighter;
+}
+
+
+/* /////////////// media query //////////////////// */
+
+@media screen and (max-width: 480px) {
+    * {
+        font-size: 16px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .highlight-hover-pink:hover {
+        box-shadow: 0px -6px 0px var(--color-pink-40-opa) inset;
+    }
+
+    #nav-left {
+        margin-left: 14px;
+    }
+
+    #nav-right {
+        margin-right: 14px;
+    }
+
+    #nav-right>span {
+        height: fit-content;
+        margin: 0 6px;
+    }
+
+    .switch {
+        transform: translateY(-6px);
+    }
+
+    #welcome-section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    #welcome-section>.prefaceTxt {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .quote.left {
+        top: -65px;
+        left: -35px;
+
+    }
+
+    .quote.right {
+        right: -35px;
+        bottom: -65px;
+
+    }
+
+    .project-container {
+        display: grid;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: auto auto;
+    }
+
+    .project-tile {
+        margin-right: 0;
+        transform: scale(0.8);
+    }
+
+    .project-tile>.projectNumber {
+        display: none;
+    }
+
+    .projectsTxt {
+        text-align: center;
+    }
+
+    .opacityTxt {
+        left: 35%;
+        bottom: -26px;
+    }
+
+    #project1,
+    #project3 {
+        box-shadow: 5px 7px 0px var(--color-pink);
+    }
+
+    #project2,
+    #project4 {
+        box-shadow: 5px 7px 0px var(--color-blue);
+    }
+
+    #about-me {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .profileImg {
+        width: 100%;
+        height: 230px;
+        background-position: 0% 40%;
+        background-size: cover;
+        box-shadow: none;
+    }
+
+    .profileTxt {
+        margin: auto;
+        width: 90%;
+        position: relative;
+    }
+
+    #aboutMeTitle {
+        position: absolute;
+        top: -135%;
+        left: 25%;
+    }
+
+    #profile-link-container {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    * {
+        font-size: 16px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .highlight-hover-pink:hover {
+        box-shadow: 0px -6px 0px var(--color-pink-40-opa) inset;
+    }
+
+    #nav-left {
+        margin-left: 14px;
+    }
+
+    #nav-right {
+        margin-right: 14px;
+    }
+
+    #nav-right>span {
+        height: fit-content;
+        margin: 0 6px;
+    }
+
+    .switch {
+        transform: translateY(-6px);
+    }
+
+    #welcome-section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    #welcome-section>.prefaceTxt {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .quote.left {
+        top: -65px;
+        left: -35px;
+
+    }
+
+    .quote.right {
+        right: -35px;
+        bottom: -65px;
+
+    }
+
+    .project-container {
+        display: grid;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .project-tile {
+        margin-right: 0;
+        transform: scale(0.8);
+    }
+
+    .project-tile>.projectNumber {
+        display: none;
+    }
+
+    .projectsTxt {
+        text-align: center;
+    }
+
+    .opacityTxt {
+        left: 42%;
+        bottom: -36px;
+    }
+
+    #project1,
+    #project3 {
+        box-shadow: 5px 7px 0px var(--color-pink);
+    }
+
+    #project2,
+    #project4 {
+        box-shadow: 5px 7px 0px var(--color-blue);
+    }
+
+    #about-me {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .profileImg {
+        width: 100%;
+        height: 230px;
+        background-position: 0% 40%;
+        background-size: cover;
+        box-shadow: none;
+    }
+
+    .profileTxt {
+        margin: auto;
+        width: 90%;
+        position: relative;
+    }
+
+    #contact {
+        flex: 1 1 0;
+        margin-bottom: 46px;
+    }
+
+}
+
+@media only screen and (max-device-width: 840px) {
+    #contact {
+        flex-direction: column;
+        margin-bottom: 46px;
+    }
+
+    .contactMeRightContainer {
+        margin-left: 0px;
+    }
+
+    #contactMeTitle {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0px -20px 0px var(--color-blue) inset;
+    }
+
+    .inputContainer {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inputContainer>input {
+        width: 100%;
+    }
+
+    .inputContainer>textarea {
+        max-height: 124px;
+    }
+
+    .btn-submit {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6px;
+    }
+
+    .contactImg>img {
+        display: none;
+    }
+
+    #profile-link-container {
+        width: 50%;
+        margin-top: 24px;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: var(--color-pink-40-opa);
+    }
+
+    .sidebarLogo {
+        transform: translateX(8px);
+        margin-right: 6px;
+    }
+
+    .linkContainer {
+        width: 100%;
+        text-align: center;
+        transform: scale(1.2);
+        background-color: transparent;
+        padding: 0%;
+    }
+
+    #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+
+    .footerLogoContainer {
+        display: none;
+    }
+
+
+    .footerTxt {
+        margin-left: 0px;
+        font-weight: lighter;
+    }
+
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 520px) {
+    #profile-link-container {
+        width: 60%;
+    }
+}
